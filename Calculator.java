@@ -32,7 +32,6 @@ public class Calculator extends Frame implements ActionListener{
         p1.add(t1);
         t1.setText("0");
 
-        //pt p2 instantiem fiecare buton in parte
         for(int i=0;i<16;i++){
             b[i] = new Button();
             p2.add(b[i]);
@@ -78,11 +77,6 @@ public class Calculator extends Frame implements ActionListener{
         try{
           x = x*10+Integer.parseInt(bx.getLabel());
           t1.setText(x+"");
-          /*
-               0
-               5 = 0*10+5
-               s6 = 5*10+6
-                   */
         }catch(NumberFormatException e){
             switch(bx.getLabel()){
                 case "+":
@@ -137,12 +131,9 @@ public class Calculator extends Frame implements ActionListener{
                 break;
             }
         }
-
     }
-
 
     public static void main(String[] args) {
         new Calculator();
     }
-
 }
